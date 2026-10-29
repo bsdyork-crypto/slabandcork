@@ -17,17 +17,19 @@
   /* header */
   header { position:sticky; top:0; z-index:10; background:rgba(20,13,9,.88); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border-bottom:1px solid rgba(240,180,106,.18); }
   header .wrap { display:flex; justify-content:space-between; align-items:center; padding:14px 20px; gap:18px; }
-  .logo { font-size:25px; letter-spacing:.04em; color:#f3e9da; text-decoration:none; white-space:nowrap; }
-  .logo span { color:var(--glow); font-style:italic; }
-  nav { display:flex; gap:24px; align-items:center; font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:14px; }
+  .logo { display:flex; align-items:center; gap:14px; font-size:42px; line-height:1; letter-spacing:.03em; color:#f3e9da; text-decoration:none; white-space:nowrap; }
+  .logo .mark { width:46px; height:64px; flex:none; }
+  @media (max-width:560px) { .logo { font-size:28px; gap:9px; } .logo .mark { width:30px; height:42px; } }
+  .logo .word span { color:var(--glow); font-style:italic; }
+  nav { display:flex; gap:32px; align-items:center; font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:17px; }
   nav a { color:#d9c8b2; text-decoration:none; letter-spacing:.04em; }
   nav a:hover { color:#fff; }
   nav a.call { color:var(--night); background:var(--glow); padding:8px 14px; border-radius:4px; font-weight:700; letter-spacing:0; }
-  @media (max-width:760px) { nav a:not(.call) { display:none; } }
+  @media (max-width:760px) { nav { display:none; } }
 
   /* hero */
   .hero { position:relative; min-height:min(88vh,820px); display:flex; align-items:center; color:#f6ecdf; background:#16100c; overflow:hidden; }
-  .hero::after { content:""; position:absolute; top:0; bottom:0; right:0; aspect-ratio:4/3; max-width:100%; background:url(img/led-wall.jpg) center/cover no-repeat; -webkit-mask-image:linear-gradient(90deg, transparent 0%, #000 32%); mask-image:linear-gradient(90deg, transparent 0%, #000 32%); }
+  .hero::after { content:""; position:absolute; top:0; bottom:0; right:0; aspect-ratio:4/3; max-width:100%; background:url(img/hero-wall.jpg) center/cover no-repeat; -webkit-mask-image:linear-gradient(90deg, transparent 0%, #000 32%); mask-image:linear-gradient(90deg, transparent 0%, #000 32%); }
   .hero .wrap { z-index:1; }
   @media (max-aspect-ratio:4/3) { .hero::after { left:0; width:100%; aspect-ratio:auto; -webkit-mask-image:none; mask-image:none; } }
   .hero::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 60%); z-index:1; }
@@ -176,8 +178,13 @@
 </head>
 <body>
 <header><div class="wrap">
-  <a class="logo" href="#top">Slab <span>&amp;</span> Cork</a>
-  <nav><a href="#work">Work</a><a href="#led">LED lighting</a><a href="#shop">The shop</a><a href="#pricing">Pricing</a><a class="call" href="tel:+17175775300">(717) 577-5300</a></nav>
+  <a class="logo" href="#top" aria-label="Slab &amp; Cork home"><svg class="mark" viewBox="0 0 40 56" aria-hidden="true">
+    <path d="M10 3 C15 1.5 22 2 27 3.5 C29 11 26 19 28 27 C30 36 27 44 28.5 52 C22 54 16 53.5 11 52.5 C9 44 12 36 10 27 C8 18 12 11 10 3 Z" fill="#5a2f1c" stroke="#f0b46a" stroke-width="1.6"/>
+    <path d="M15.5 8 C17.5 19 14.5 32 17.5 47" fill="none" stroke="#f0b46a" stroke-opacity=".5" stroke-width="1"/>
+    <path d="M21.5 7 C23 15 20.5 25 22.5 33" fill="none" stroke="#f0b46a" stroke-opacity=".35" stroke-width="1"/>
+    <g transform="rotate(-24 30 44)"><rect x="22" y="38.5" width="15" height="11" rx="2.5" fill="#d9a066" stroke="#140d09" stroke-width="1.5"/><circle cx="26.5" cy="42.5" r=".9" fill="#8a5a30"/><circle cx="31" cy="45.5" r=".9" fill="#8a5a30"/><circle cx="33.5" cy="41.5" r=".8" fill="#8a5a30"/></g>
+  </svg><span class="word">Slab <span>&amp;</span> Cork</span></a>
+  <nav><a href="#work">Work</a><a href="#led">LED lighting</a><a href="#shop">The shop</a><a href="#pricing">Pricing</a></nav>
 </div></header>
 
 <div class="hero" id="top"><div class="wrap">
