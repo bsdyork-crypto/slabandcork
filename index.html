@@ -144,6 +144,33 @@
   .gift-list { list-style:none; padding:0; margin:0 auto; max-width:900px; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:15px; }
   .gift-list li { background:var(--card); border:1px solid var(--line); border-radius:999px; padding:9px 18px; color:var(--ink); }
   .gift-list li::before { content:"◆"; color:var(--gold); font-size:9px; margin-right:9px; vertical-align:2px; }
+  /* wine backdrop behind gifts, pricing, how it works */
+  .wine-bg { position:relative; background:var(--night) url(img/bottles-bg.jpg) center/cover fixed; color:#f3e9da; }
+  .wine-bg::before { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,13,9,.9) 0%, rgba(20,13,9,.78) 50%, rgba(20,13,9,.95) 92%, rgba(20,13,9,1) 100%); }
+  .wine-bg > section { position:relative; }
+  .wine-bg > section + section { border-top:1px solid rgba(240,180,106,.16); }
+  .wine-bg h2, .wine-bg h3 { color:#f3e9da; }
+  .wine-bg .lede, .wine-bg .callout { color:#cdb99f; }
+  .wine-bg .gift-list li { background:rgba(20,13,9,.55); border-color:rgba(240,180,106,.3); color:#f3e9da; }
+  .wine-bg .tiers { grid-template-columns:repeat(3,1fr); max-width:960px; margin:0 auto; }
+  .wine-bg .tier { background:rgba(20,13,9,.62); border-color:rgba(240,180,106,.28); position:relative; }
+  .wine-bg .tier .cap { color:#cdb99f; }
+  .wine-bg .tier .amt { color:var(--glow); border-top-color:rgba(240,180,106,.22); }
+  .wine-bg .tier .amt small { color:#cdb99f; }
+  .wine-bg .tier .amt s { font-size:16px; color:#8f7b66; margin-left:6px; }
+  .wine-bg .tier.feature { border-color:var(--glow); box-shadow:0 0 40px rgba(240,180,106,.18); }
+  .wine-bg .flag { position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--glow); color:var(--night); font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; padding:4px 12px; border-radius:3px; white-space:nowrap; }
+  .wine-bg .addons { max-width:960px; margin:28px auto 0; grid-template-columns:repeat(4,1fr); gap:0; background:rgba(20,13,9,.62); border:1px solid rgba(240,180,106,.28); border-radius:6px; }
+  .wine-bg .addons div { border-top:0; border-left:1px solid rgba(240,180,106,.18); padding:16px 12px; }
+  .wine-bg .addons div:first-child { border-left:0; }
+  .wine-bg .addons span { color:#cdb99f; }
+  .wine-bg .addons b { color:#f3e9da; font-size:19px; }
+  .wine-bg .steps div { background:rgba(20,13,9,.62); border-color:rgba(240,180,106,.28); }
+  .wine-bg .steps p { color:#cdb99f; }
+  @media (max-width:900px) { .wine-bg .tiers { grid-template-columns:1fr; max-width:420px; } .wine-bg .addons { grid-template-columns:1fr 1fr; } .wine-bg .addons div:nth-child(3) { border-left:0; } .wine-bg .addons div:nth-child(n+3) { border-top:1px solid rgba(240,180,106,.18); } }
+  @media (hover:none) { .wine-bg { background-attachment:scroll; } }
+  /* fade the rack photo into the order section */
+  .contact::before { background:linear-gradient(180deg, rgba(20,13,9,1) 0%, rgba(20,13,9,.8) 12%, rgba(20,13,9,.55) 35%, rgba(20,13,9,.72) 70%, rgba(20,13,9,.9) 100%); }
   footer { text-align:center; color:var(--soft); font-size:13px; padding:22px 0 40px; font-family:-apple-system, Helvetica, Arial, sans-serif; }
 </style>
 </head>
@@ -163,7 +190,7 @@
 
 <section id="work"><div class="wrap">
   <h2>Recent work</h2>
-  <p class="lede">A three-rack walnut wall (The Dozen), about 36 bottles, 12 in each rack. Each rack starts as a raw slab, so the grain, edge and shape are never repeated.</p>
+  <p class="lede">A three-rack walnut wall, about 36 bottles, 12 in each rack. Each rack starts as a raw slab, so the grain, edge and shape are never repeated.</p>
   <div class="gallery">
     <img src="img/8736.jpg" alt="Three walnut wine racks, front view">
     <img src="img/8740.jpg" alt="Walnut wine racks with recessed lighting">
@@ -214,6 +241,7 @@
   </div>
 </div></section>
 
+<div class="wine-bg">
 <section class="gifts" id="gifts"><div class="wrap">
   <h2>Makes a great gift</h2>
   <p class="lede">A one-of-a-kind slab with their name or date engraved is a gift they'll hang for years.</p>
@@ -225,20 +253,19 @@
   <p class="callout">Add a name or date engraving for +$99. Need it by a date? Tell us when you order.</p>
 </div></section>
 
-<section id="pricing" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+<section id="pricing"><div class="wrap">
   <h2>Pricing</h2>
-  <p class="lede">Starting prices. Your final price is set when you pick your slab.</p>
+  <p class="lede">Every slab is one of a kind. Pick the size, then add the extras.</p>
   <div class="tiers">
-    <div class="tier"><h3>The Pour</h3><div class="cap">Wall rack · 4–6 bottles</div><div class="amt"><small>From</small>$179</div></div>
-    <div class="tier"><h3>The Cellar</h3><div class="cap">Wall rack · 8–12 bottles + glasses</div><div class="amt"><small>From</small>$349</div></div>
-    <div class="tier"><h3>The Estate</h3><div class="cap">Statement piece · 18–30 bottles</div><div class="amt"><small>From</small>$750</div></div>
-    <div class="tier"><h3>Bar &amp; Table</h3><div class="cap">Slab bar top or console with rack</div><div class="amt"><small>From</small>$1,200</div></div>
+    <div class="tier"><h3>The Pour</h3><div class="cap">Wall rack · 4–6 bottles</div><div class="amt">$299</div></div>
+    <div class="tier"><h3>The Cellar</h3><div class="cap">Wall rack · 8–12 bottles + glasses</div><div class="amt">$599</div></div>
+    <div class="tier feature"><div class="flag">Best value</div><h3>The Estate</h3><div class="cap">Two or more 12-bottle racks · $599 each</div><div class="amt"><small>3-rack wall, 36 bottles</small>$1,699 <s>$1,797</s></div></div>
   </div>
   <div class="addons">
-    <div><span><a href="#led">LED backlight</a></span><b>+$129</b><span>per rack</span></div>
-    <div><span>Name or date engraving</span><b>+$99</b><span>each</span></div>
-    <div><span>Walnut, cherry or burl</span><b>+15–30%</b><span>by slab</span></div>
-    <div><span>Delivery &amp; install</span><b>Quoted</b><span>per job</span></div>
+    <div><span><a href="#led">LED backlight</a></span><b>+$129 per rack</b></div>
+    <div><span>Name or date engraving</span><b>+$99 each</b></div>
+    <div><span>Walnut, cherry or burl</span><b>+15–30%</b></div>
+    <div><span>Delivery &amp; install</span><b>Quoted per job</b></div>
   </div>
   <p class="callout">Questions? Call or text (717) 577-5300.</p>
 </div></section>
@@ -252,6 +279,7 @@
     <div><b>Step 3</b><h3>We build and install</h3><p>Cut, finished and fitted in our York shop, then hung on your wall.</p></div>
   </div>
 </div></section>
+</div>
 
 <section class="contact" id="order"><div class="wrap">
   <p class="eyebrow">Wedding · housewarming · anniversary</p>
@@ -262,7 +290,7 @@
     <label>Phone<input id="q-phone" name="phone" type="tel" autocomplete="tel" required></label>
     <label>Town<input id="q-town" name="town" autocomplete="address-level2" placeholder="York, Red Lion, Dover..."></label>
     <label>Which rack?<select id="q-rack" name="rack">
-      <option>Not sure yet</option><option>The Pour (4-6 bottles)</option><option>The Cellar (8-12 bottles + glasses)</option><option>The Estate (18-30 bottles)</option><option>Bar top or table</option></select></label>
+      <option>Not sure yet</option><option>The Pour, 4-6 bottles ($299)</option><option>The Cellar, 8-12 bottles + glasses ($599)</option><option>The Estate, 3-rack wall ($1,699)</option><option>The Estate, 2 racks ($599 each)</option></select></label>
     <label>Bottles to hold<input id="q-bottles" name="bottles" inputmode="numeric" placeholder="e.g. 12"></label>
     <label>Wood<select id="q-wood" name="wood"><option>Black walnut</option><option>Cherry</option><option>Burl</option><option>Help me pick</option></select></label>
     <div class="full checks">
