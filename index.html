@@ -132,6 +132,18 @@
   .quote .note { grid-column:1 / -1; font-size:13px; color:#a8937c; margin:0; }
   .quote .done { grid-column:1 / -1; color:var(--glow); margin:0; }
   @media (max-width:560px) { .quote { grid-template-columns:1fr; padding:18px; } }
+  /* york history */
+  .history { max-width:62ch; margin:-14px auto 34px; text-align:center; font-size:16px; color:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:14px 8px; }
+  .history b { color:var(--wine); font-weight:normal; font-style:italic; }
+  /* led notes */
+  .led-notes { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:30px; font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:15px; color:#cdb99f; }
+  .led-notes div { border:1px solid rgba(240,180,106,.3); border-radius:6px; padding:14px 16px; }
+  .led-notes b { display:block; color:var(--glow); font-size:12px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:4px; }
+  @media (max-width:560px) { .led-notes { grid-template-columns:1fr; } }
+  /* gifts */
+  .gift-list { list-style:none; padding:0; margin:0 auto; max-width:900px; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:15px; }
+  .gift-list li { background:var(--card); border:1px solid var(--line); border-radius:999px; padding:9px 18px; color:var(--ink); }
+  .gift-list li::before { content:"◆"; color:var(--gold); font-size:9px; margin-right:9px; vertical-align:2px; }
   footer { text-align:center; color:var(--soft); font-size:13px; padding:22px 0 40px; font-family:-apple-system, Helvetica, Arial, sans-serif; }
 </style>
 </head>
@@ -146,7 +158,7 @@
   <h1>Every slab is one of a kind.<br><em>So is every rack.</em></h1>
   <p class="sub">Black walnut and hardwood slabs, cut, finished and fitted by hand for your wall, your bottles and your room. Add a warm LED glow and it becomes the centerpiece of the house.</p>
   <a class="btn glow" href="#order">Start a custom rack</a><a class="btn ghost" href="#led">See the LED option</a>
-  <div class="trust"><span>One-of-a-kind slabs</span><span>Built in our York shop</span><span>Ready in 2 to 3 weeks</span></div>
+  <div class="trust"><span>One-of-a-kind slabs</span><span>Built in our York, PA shop</span><span>Ready in 2 to 3 weeks</span></div>
 </div></div>
 
 <section id="work"><div class="wrap">
@@ -174,13 +186,18 @@
     <div><b>Warm white</b>A soft amber tone that brings out the walnut grain and the bottle labels.</div>
     <div><b>Follows the edge</b>The glow traces each slab's natural live edge, so no two look alike.</div>
   </div>
-  <p class="fine">LED photos are a preview of the add-on on this same wall.</p>
+  <div class="led-notes">
+    <div><b>Good to know</b>An electrical outlet is needed near the rack.</div>
+    <div><b>No outlet?</b>Battery-powered LED with a remote control is available for an additional charge.</div>
+  </div>
+  <p class="fine">The LED photos above are a preview of the add-on, shown on this same wall.</p>
   <div class="center"><a class="btn glow" href="#order">Add LED to my rack</a></div>
 </div></section>
 
 <section id="shop"><div class="wrap">
-  <h2>Built in our York shop</h2>
+  <h2>Built in our York, PA shop</h2>
   <p class="lede">Every rack is made start to finish in our 5,000 sq ft shop. Slabs are flattened, sealed, finished to a high gloss and fitted with bottle hardware before they ever leave the building.</p>
+  <p class="history"><b>Made in America's first capital.</b> The Continental Congress met in York from September 1777 to June 1778 and adopted the Articles of Confederation here, which is why York calls itself the first capital of the United States.</p>
   <div class="shop">
     <figure class="big"><img src="img/7470.jpg" alt="Finished walnut slab with the bottle rail laid on top"><figcaption>Bottle rail test-fit on a finished slab</figcaption></figure>
     <figure><img src="img/7471.jpg" alt="Bottle hardware laid out on two slabs"><figcaption>Hardware layout</figcaption></figure>
@@ -195,6 +212,17 @@
     <figure><img src="img/7472.jpg" alt="Laying out bottle hardware"><figcaption>4. Bottle hardware laid out</figcaption></figure>
     <figure><img src="img/8739.jpg" alt="Racks installed and filled"><figcaption>5. On your wall</figcaption></figure>
   </div>
+</div></section>
+
+<section class="gifts" id="gifts"><div class="wrap">
+  <h2>Makes a great gift</h2>
+  <p class="lede">A one-of-a-kind slab with their name or date engraved is a gift they'll hang for years.</p>
+  <ul class="gift-list">
+    <li>Wedding gifts</li><li>Anniversaries</li><li>Housewarming and new home</li><li>Graduations</li>
+    <li>Retirement</li><li>Birthdays</li><li>Father's Day and Mother's Day</li><li>Christmas and holidays</li>
+    <li>Client and corporate gifts</li><li>Groomsmen and bridal party</li>
+  </ul>
+  <p class="callout">Add a name or date engraving for +$99. Need it by a date? Tell us when you order.</p>
 </div></section>
 
 <section id="pricing" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
