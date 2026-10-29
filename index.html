@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slab &amp; Cork | Custom Live-Edge Wine Racks</title>
+<meta name="description" content="Custom live-edge black walnut wine racks, handmade in York, PA. Optional LED backlighting, engraving and installation.">
+<style>
+  :root { --ink:#2a1d14; --soft:#7a6656; --paper:#f7f1e8; --card:#fffaf3; --line:#e4d7c5; --wine:#6e1f2a; --gold:#b88a44; --night:#140d09; --glow:#f0b46a; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 Georgia, "Times New Roman", serif; }
+  .sans { font-family:-apple-system, Helvetica, Arial, sans-serif; }
+  .wrap { max-width:1120px; margin:0 auto; padding:0 20px; }
+  img { max-width:100%; }
+
+  /* header */
+  header { position:sticky; top:0; z-index:10; background:rgba(20,13,9,.88); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border-bottom:1px solid rgba(240,180,106,.18); }
+  header .wrap { display:flex; justify-content:space-between; align-items:center; padding:14px 20px; gap:18px; }
+  .logo { font-size:25px; letter-spacing:.04em; color:#f3e9da; text-decoration:none; white-space:nowrap; }
+  .logo span { color:var(--glow); font-style:italic; }
+  nav { display:flex; gap:24px; align-items:center; font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:14px; }
+  nav a { color:#d9c8b2; text-decoration:none; letter-spacing:.04em; }
+  nav a:hover { color:#fff; }
+  nav a.call { color:var(--night); background:var(--glow); padding:8px 14px; border-radius:4px; font-weight:700; letter-spacing:0; }
+  @media (max-width:760px) { nav a:not(.call) { display:none; } }
+
+  /* hero */
+  .hero { position:relative; min-height:min(88vh,820px); display:flex; align-items:center; color:#f6ecdf; background:#16100c; overflow:hidden; }
+  .hero::after { content:""; position:absolute; top:0; bottom:0; right:0; aspect-ratio:4/3; max-width:100%; background:url(img/led-wall.jpg) center/cover no-repeat; -webkit-mask-image:linear-gradient(90deg, transparent 0%, #000 32%); mask-image:linear-gradient(90deg, transparent 0%, #000 32%); }
+  .hero .wrap { z-index:1; }
+  @media (max-aspect-ratio:4/3) { .hero::after { left:0; width:100%; aspect-ratio:auto; -webkit-mask-image:none; mask-image:none; } }
+  .hero::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 60%); z-index:1; }
+  .hero .wrap { position:relative; width:100%; padding-top:70px; padding-bottom:70px; }
+  .eyebrow { font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:13px; letter-spacing:.22em; text-transform:uppercase; color:var(--glow); margin:0 0 18px; }
+  .hero h1 { font-size:clamp(40px,6.4vw,76px); line-height:1.02; margin:0 0 20px; font-weight:normal; max-width:12ch; }
+  .hero h1 em { color:var(--glow); }
+  .hero p.sub { color:#d8c7b1; max-width:44ch; margin:0 0 30px; font-size:20px; }
+  .btn { display:inline-block; background:var(--wine); color:#fff; text-decoration:none; padding:14px 26px; border-radius:4px; font-family:-apple-system, Helvetica, Arial, sans-serif; font-weight:600; font-size:15px; }
+  .btn.glow { background:var(--glow); color:var(--night); }
+  .btn.ghost { background:transparent; border:1px solid rgba(243,233,218,.45); color:#f3e9da; margin-left:10px; }
+  .trust { display:flex; flex-wrap:wrap; gap:10px 26px; margin-top:42px; font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:14px; color:#cdb99f; }
+  .trust span::before { content:"◆"; color:var(--glow); font-size:9px; margin-right:9px; vertical-align:2px; }
+  @media (max-width:760px) {
+    .hero { min-height:auto; background-position:70% center; }
+    .hero::before { background:linear-gradient(180deg, rgba(20,13,9,.55) 0%, rgba(20,13,9,.9) 100%); }
+    .btn.ghost { margin:12px 0 0; }
+  }
+
+  section { padding:72px 0; }
+  h2 { font-weight:normal; font-size:clamp(30px,4vw,40px); margin:0 0 10px; text-align:center; }
+  .lede { text-align:center; color:var(--soft); max-width:58ch; margin:0 auto 34px; }
+
+  /* gallery */
+  .gallery { display:grid; grid-template-columns:repeat(6,1fr); gap:14px; }
+  .gallery img { width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:6px; display:block; grid-column:span 2; }
+  .gallery .wide { grid-column:span 3; aspect-ratio:4/3; }
+  @media (max-width:760px) { .gallery { grid-template-columns:1fr 1fr; } .gallery img, .gallery .wide { grid-column:auto; aspect-ratio:3/4; } .gallery img:last-child { grid-column:span 2; aspect-ratio:4/3; } }
+
+  /* LED */
+  .led { background:radial-gradient(ellipse at 50% 0%, #2b1a10 0%, var(--night) 70%); color:#f3e9da; }
+  .led h2 em { color:var(--glow); }
+  .led .lede { color:#c7b29a; }
+  .compare { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .compare figure { margin:0; position:relative; }
+  .compare img { width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:8px; display:block; }
+  .compare figure.on img { box-shadow:0 0 60px rgba(240,180,106,.28); }
+  .compare figcaption { position:absolute; left:14px; top:14px; font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:12px; letter-spacing:.14em; text-transform:uppercase; background:rgba(20,13,9,.72); color:#f3e9da; padding:6px 10px; border-radius:3px; }
+  .compare figure.on figcaption { background:var(--glow); color:var(--night); font-weight:700; }
+  .led-points { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:22px; margin-top:38px; font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:15px; color:#cdb99f; }
+  .led-points b { display:block; font-family:Georgia, serif; font-weight:normal; color:#f3e9da; font-size:20px; margin-bottom:4px; }
+  .led .center { text-align:center; margin-top:40px; }
+  .fine { font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:12px; color:#8f7b66; text-align:center; margin-top:16px; }
+  @media (max-width:560px) { .compare { grid-template-columns:1fr; } }
+
+  /* shop */
+  .shop { display:grid; grid-template-columns:1.3fr 1fr 1fr; grid-template-rows:auto auto; gap:14px; }
+  .shop figure { margin:0; position:relative; overflow:hidden; border-radius:6px; }
+  .shop img { width:100%; height:100%; object-fit:cover; display:block; }
+  .shop figure:not(.big) { aspect-ratio:4/3; }
+  .shop .big { grid-row:span 2; }
+  .shop figcaption { position:absolute; left:0; right:0; bottom:0; padding:28px 14px 12px; background:linear-gradient(transparent, rgba(20,13,9,.8)); color:#fff; font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:13px; }
+  @media (max-width:760px) { .shop { grid-template-columns:1fr 1fr; } .shop .big { grid-column:span 2; grid-row:auto; aspect-ratio:4/3; } }
+
+  .process { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:44px; }
+  .process figure { margin:0; }
+  .process img { width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:6px; display:block; }
+  .process figcaption { font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:13px; color:var(--soft); text-align:center; padding-top:6px; }
+
+  /* pricing */
+  .tiers { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  .tier { background:#fff; border:1px solid var(--line); border-radius:6px; padding:28px 18px 24px; text-align:center; display:flex; flex-direction:column; gap:6px; }
+  .tier h3 { font-weight:normal; font-size:24px; margin:0; }
+  .tier .cap { color:var(--soft); font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:14px; }
+  .tier .amt { font-size:28px; color:var(--wine); margin-top:auto; padding-top:12px; border-top:1px solid var(--line); font-variant-numeric:tabular-nums; }
+  .tier .amt small { display:block; font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--soft); }
+  .addons { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:26px; font-family:-apple-system, Helvetica, Arial, sans-serif; text-align:center; }
+  .addons div { padding:14px 10px; border-top:2px solid var(--gold); }
+  .addons span { display:block; color:var(--soft); font-size:14px; }
+  .addons b { display:block; font-family:Georgia, serif; font-weight:normal; font-size:21px; color:var(--ink); margin-top:2px; }
+  .addons a { color:inherit; }
+  .callout { text-align:center; margin:22px 0 0; color:var(--soft); font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:15px; }
+  @media (max-width:900px) { .tiers, .addons { grid-template-columns:1fr 1fr; } }
+  @media (max-width:480px) { .tiers { grid-template-columns:1fr; } }
+
+  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .steps div { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:26px 22px; }
+  .steps b { display:block; color:var(--gold); font-size:15px; font-family:-apple-system, Helvetica, Arial, sans-serif; letter-spacing:.18em; text-transform:uppercase; font-weight:700; margin-bottom:6px; }
+  .steps h3 { font-weight:normal; font-size:23px; margin:0 0 6px; }
+  .steps p { margin:0; color:var(--soft); font-size:16px; }
+  @media (max-width:760px) { .steps { grid-template-columns:1fr; } }
+
+  .contact { background:var(--night) url(img/led-trio.jpg) center/cover; color:#f3e9da; text-align:center; position:relative; padding:110px 0; }
+  .contact::before { content:""; position:absolute; inset:0; background:rgba(20,13,9,.8); }
+  .contact .wrap { position:relative; }
+  .contact p { color:#d3c0a8; max-width:52ch; margin:0 auto 26px; }
+
+  /* inquiry form */
+  .quote { max-width:640px; margin:0 auto; text-align:left; background:rgba(20,13,9,.72); border:1px solid rgba(240,180,106,.25); border-radius:8px; padding:24px; font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:15px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .quote label { display:flex; flex-direction:column; gap:5px; color:#d3c0a8; font-size:13px; letter-spacing:.03em; min-width:0; }
+  .quote .full { grid-column:1 / -1; }
+  .quote input, .quote select, .quote textarea { font:inherit; font-size:16px; color:#f3e9da; background:rgba(255,250,243,.07); border:1px solid rgba(243,233,218,.25); border-radius:4px; padding:10px 12px; width:100%; }
+  .quote select option { color:#2a1d14; }
+  .quote textarea { min-height:84px; resize:vertical; }
+  .quote input:focus, .quote select:focus, .quote textarea:focus { outline:2px solid var(--glow); outline-offset:1px; }
+  .quote .checks { display:flex; flex-wrap:wrap; gap:8px 22px; color:#f3e9da; }
+  .quote .checks label { flex-direction:row; align-items:center; gap:8px; font-size:15px; color:#f3e9da; }
+  .quote .checks input { width:auto; }
+  .quote .actions { grid-column:1 / -1; display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+  .quote button { cursor:pointer; border:0; }
+  .quote .note, .quote .done { max-width:none; }
+  .quote .note { grid-column:1 / -1; font-size:13px; color:#a8937c; margin:0; }
+  .quote .done { grid-column:1 / -1; color:var(--glow); margin:0; }
+  @media (max-width:560px) { .quote { grid-template-columns:1fr; padding:18px; } }
+  footer { text-align:center; color:var(--soft); font-size:13px; padding:22px 0 40px; font-family:-apple-system, Helvetica, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#top">Slab <span>&amp;</span> Cork</a>
+  <nav><a href="#work">Work</a><a href="#led">LED lighting</a><a href="#shop">The shop</a><a href="#pricing">Pricing</a><a class="call" href="tel:+17175775300">(717) 577-5300</a></nav>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <p class="eyebrow">Handmade live-edge wine racks · York, PA</p>
+  <h1>Every slab is one of a kind.<br><em>So is every rack.</em></h1>
+  <p class="sub">Black walnut and hardwood slabs, cut, finished and fitted by hand for your wall, your bottles and your room. Add a warm LED glow and it becomes the centerpiece of the house.</p>
+  <a class="btn glow" href="#order">Start a custom rack</a><a class="btn ghost" href="#led">See the LED option</a>
+  <div class="trust"><span>One-of-a-kind slabs</span><span>Built in our York shop</span><span>Ready in 2 to 3 weeks</span></div>
+</div></div>
+
+<section id="work"><div class="wrap">
+  <h2>Recent work</h2>
+  <p class="lede">A three-rack walnut wall, about 54 bottles. Each rack starts as a raw slab, so the grain, edge and shape are never repeated.</p>
+  <div class="gallery">
+    <img src="img/8736.jpg" alt="Three walnut wine racks, front view">
+    <img src="img/8740.jpg" alt="Walnut wine racks with recessed lighting">
+    <img src="img/8735.jpg" alt="Wine rack wall seen from the side">
+    <img class="wide" src="img/8737.jpg" alt="Wide view of the three-rack wall">
+    <img class="wide" src="img/8738.jpg" alt="Racks from the bar side">
+  </div>
+</div></section>
+
+<section class="led" id="led"><div class="wrap">
+  <p class="eyebrow" style="text-align:center">Add-on · +$129 per rack</p>
+  <h2>Turn the lights down. <em>Let the slab glow.</em></h2>
+  <p class="lede">A warm LED strip hidden behind the slab outlines the live edge and lights the bottles from behind. By day it's a wine rack. At night it's the room's best light.</p>
+  <div class="compare">
+    <figure><img src="img/8736.jpg" alt="Three walnut wine racks in daylight"><figcaption>Daylight</figcaption></figure>
+    <figure class="on"><img src="img/led-trio.jpg" alt="The same three racks with warm LED backlighting at night"><figcaption>LED backlight</figcaption></figure>
+  </div>
+  <div class="led-points">
+    <div><b>Hidden strip</b>Mounted behind the slab, so you see the glow and never the light.</div>
+    <div><b>Warm white</b>A soft amber tone that brings out the walnut grain and the bottle labels.</div>
+    <div><b>Follows the edge</b>The glow traces each slab's natural live edge, so no two look alike.</div>
+  </div>
+  <p class="fine">LED photos are a preview of the add-on on this same wall.</p>
+  <div class="center"><a class="btn glow" href="#order">Add LED to my rack</a></div>
+</div></section>
+
+<section id="shop"><div class="wrap">
+  <h2>Built in our York shop</h2>
+  <p class="lede">Every rack is made start to finish in our 5,000 sq ft shop. Slabs are flattened, sealed, finished to a high gloss and fitted with bottle hardware before they ever leave the building.</p>
+  <div class="shop">
+    <figure class="big"><img src="img/7470.jpg" alt="Finished walnut slab with the bottle rail laid on top"><figcaption>Bottle rail test-fit on a finished slab</figcaption></figure>
+    <figure><img src="img/7471.jpg" alt="Bottle hardware laid out on two slabs"><figcaption>Hardware layout</figcaption></figure>
+    <figure><img src="img/7400.jpg" alt="Slabs mid-finish on the shop floor"><figcaption>Mid-finish</figcaption></figure>
+    <figure><img src="img/7632.jpg" alt="Close-up of the high-gloss live edge"><figcaption>The live edge, up close</figcaption></figure>
+    <figure><img src="img/7933.jpg" alt="Finished high-gloss slab"><figcaption>Final gloss coat</figcaption></figure>
+  </div>
+  <div class="process">
+    <figure><img src="img/7373.jpg" alt="Raw walnut slabs"><figcaption>1. The raw slab</figcaption></figure>
+    <figure><img src="img/7376.jpg" alt="First finish coat"><figcaption>2. First finish coat</figcaption></figure>
+    <figure><img src="img/7633.jpg" alt="Grain coming alive under the finish"><figcaption>3. Grain comes alive</figcaption></figure>
+    <figure><img src="img/7472.jpg" alt="Laying out bottle hardware"><figcaption>4. Bottle hardware laid out</figcaption></figure>
+    <figure><img src="img/8739.jpg" alt="Racks installed and filled"><figcaption>5. On your wall</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="pricing" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+  <h2>Pricing</h2>
+  <p class="lede">Starting prices. Your final price is set when you pick your slab.</p>
+  <div class="tiers">
+    <div class="tier"><h3>The Pour</h3><div class="cap">Wall rack · 4–6 bottles</div><div class="amt"><small>From</small>$179</div></div>
+    <div class="tier"><h3>The Cellar</h3><div class="cap">Wall rack · 8–12 bottles + glasses</div><div class="amt"><small>From</small>$349</div></div>
+    <div class="tier"><h3>The Estate</h3><div class="cap">Statement piece · 18–30 bottles</div><div class="amt"><small>From</small>$750</div></div>
+    <div class="tier"><h3>Bar &amp; Table</h3><div class="cap">Slab bar top or console with rack</div><div class="amt"><small>From</small>$1,200</div></div>
+  </div>
+  <div class="addons">
+    <div><span><a href="#led">LED backlight</a></span><b>+$129</b><span>per rack</span></div>
+    <div><span>Name or date engraving</span><b>+$99</b><span>each</span></div>
+    <div><span>Walnut, cherry or burl</span><b>+15–30%</b><span>by slab</span></div>
+    <div><span>Delivery &amp; install</span><b>Quoted</b><span>per job</span></div>
+  </div>
+  <p class="callout">Questions? Call or text (717) 577-5300.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>How it works</h2>
+  <p class="lede">Most racks are on your wall in 2 to 3 weeks.</p>
+  <div class="steps">
+    <div><b>Step 1</b><h3>Send your wall</h3><p>Text a photo of the wall and how many bottles you want to hold.</p></div>
+    <div><b>Step 2</b><h3>Pick your slab</h3><p>We send photos of slabs that fit, with a price. You choose.</p></div>
+    <div><b>Step 3</b><h3>We build and install</h3><p>Cut, finished and fitted in our York shop, then hung on your wall.</p></div>
+  </div>
+</div></section>
+
+<section class="contact" id="order"><div class="wrap">
+  <p class="eyebrow">Wedding · housewarming · anniversary</p>
+  <h2 style="color:#f3e9da">Start your custom rack</h2>
+  <p>Tell us about your wall and we'll text back photos of slabs that fit, with a price.</p>
+  <form class="quote" id="quote" novalidate>
+    <label>Your name<input id="q-name" name="name" autocomplete="name" required></label>
+    <label>Phone<input id="q-phone" name="phone" type="tel" autocomplete="tel" required></label>
+    <label>Town<input id="q-town" name="town" autocomplete="address-level2" placeholder="York, Red Lion, Dover..."></label>
+    <label>Which rack?<select id="q-rack" name="rack">
+      <option>Not sure yet</option><option>The Pour (4-6 bottles)</option><option>The Cellar (8-12 bottles + glasses)</option><option>The Estate (18-30 bottles)</option><option>Bar top or table</option></select></label>
+    <label>Bottles to hold<input id="q-bottles" name="bottles" inputmode="numeric" placeholder="e.g. 12"></label>
+    <label>Wood<select id="q-wood" name="wood"><option>Black walnut</option><option>Cherry</option><option>Burl</option><option>Help me pick</option></select></label>
+    <div class="full checks">
+      <label><input type="checkbox" id="q-led"> LED backlight (+$129)</label>
+      <label><input type="checkbox" id="q-engrave"> Engraving (+$99)</label>
+      <label><input type="checkbox" id="q-install"> Delivery &amp; install</label>
+    </div>
+    <label class="full">Anything else? Wall size, occasion, date you need it by<textarea id="q-notes" name="notes"></textarea></label>
+    <div class="actions">
+      <button class="btn glow" type="submit">Text my request</button>
+      <button class="btn ghost" type="button" id="q-copy" style="margin:0">Copy request</button>
+    </div>
+    <p class="note">Opens a text to (717) 577-5300 with your details filled in. Attach a photo of the wall if you can. Prefer to call? (717) 577-5300.</p>
+    <p class="done" id="q-done" hidden></p>
+  </form>
+</div></section>
+
+<footer>Slab &amp; Cork · Handmade in York, PA · slabandcork.com</footer>
+<script>
+(function(){
+  var f=document.getElementById('quote'), done=document.getElementById('q-done');
+  function v(id){ return document.getElementById(id).value.trim(); }
+  function c(id){ return document.getElementById(id).checked; }
+  function msg(){
+    var extras=[c('q-led')&&'LED backlight', c('q-engrave')&&'engraving', c('q-install')&&'delivery & install'].filter(Boolean);
+    return ['Slab & Cork rack request','Name: '+v('q-name'),'Phone: '+v('q-phone'),'Town: '+(v('q-town')||'-'),
+      'Rack: '+v('q-rack'),'Bottles: '+(v('q-bottles')||'-'),'Wood: '+v('q-wood'),
+      'Add-ons: '+(extras.join(', ')||'none'),'Notes: '+(v('q-notes')||'-')].join('\n');
+  }
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!v('q-name')||!v('q-phone')){ done.hidden=false; done.textContent='Add your name and phone so we can text you back.'; return; }
+    location.href='sms:+17175775300?&body='+encodeURIComponent(msg());
+    done.hidden=false; done.textContent='Your texting app should open with the request filled in. If it doesn\'t, tap Copy request and text it to (717) 577-5300.';
+  });
+  document.getElementById('q-copy').addEventListener('click',function(){
+    var t=msg();
+    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){
+      done.hidden=false; done.textContent='Copied. Paste it into a text to (717) 577-5300.';
+    },function(){ done.hidden=false; done.textContent=t; });
+  });
+})();
+</script>
+</body>
+</html>
